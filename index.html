@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SVG Generator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="wrapper">
+      <div id="output">
+        <h1>Output</h1>
+        <div id="output-svg"></div>
+        <textarea
+          id="output-html"
+          placeholder="The output code will appear here"
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="input">
+        <h1>SVG Generator</h1>
+        <form id="form">
+          <ul>
+            <li>
+              <label for="width">Width (px):</label>
+              <input
+                type="number"
+                id="width"
+                name="width"
+                max="1000"
+                placeholder="100"
+                required
+              />
+            </li>
+            <li>
+              <label for="height">Height (px):</label>
+              <input
+                type="number"
+                id="height"
+                name="height"
+                max="1000"
+                placeholder="100"
+                required
+              />
+            </li>
+            <li>
+              <label for="color">Color (hex-code):</label>
+              <input
+                type="text"
+                id="color"
+                name="color"
+                placeholder="#000000"
+              />
+            </li>
+            <li>
+              <label for="text">Text:</label>
+              <input type="text" id="text" name="text" placeholder="hello" />
+            </li>
+            <li>
+              <label for="text-color">Text color (hex-code):</label>
+              <input
+                type="text"
+                id="text-color"
+                name="text-color"
+                placeholder="#000000"
+              />
+            </li>
+            <li class="button">
+              <button type="submit" onsubmit="createSVG(event)">
+                Create SVG!
+              </button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
